@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinhardt Coetzee</title>
+    <link rel="stylesheet" href="../Content/Styles.css">
+</head>
+<body>
+    <h1>Person 1 - Reinhardt Coetzee</h1>
+    <nav>
+        <ul>
+            <li><a href="../Home/Index">MAIN</a></li>
+            <li><a href="../People/Index">LIST</a></li>
+            <li><a href="Reinhardt Coetzee.html">Reinhardt Coetzee</a></li>
+            <li><a href="Reece Wenhold.html">Reece Wenhold</a></li>
+            <li><a href="Regardt van Heerden.html">Regardt van Heerden</a></li>
+            <li><a href="Xander Visagie.html">Xander Visagie</a></li>
+            <li><a href="Arno Smalberger.html">Arno Smalberger</a></li>
+            <li><a href="javascript:history.back()">Back</a></li>
+        </ul>
+    </nav>
+
+    <section class="bio">
+        <h1>Biography and Background</h1>
+        <div class="content">
+            <img src="../HTML/Images/antman-and-the-wasp-marvel-4.png" class="flip-image" alt="Reinhardt Coetzee Image">
+            <p>Reinhardt Coetzee was born in Pretoria, South Africa. He is studying BIT (IS) with the information science elective stream. He studies IT because he likes coding.</p>
+        </div>
+    </section>
+
+    <section class="hobbies">
+        <h1>Hobbies</h1>
+        <div class="content">
+            <p>
+                He likes playing guitar, playing video games, and playing chess. Here is more text to make the image appear on the full right side of the screen becuase it is relative
+                to the text position and changed dynamically woah. I also love doing the following so yes haha.
+            </p>
+            <img src="../HTML/Images/The-Incredible-Hulk.png" class="flip-image" alt="Hobbies Image">
+        </div>
+    </section>
+
+    <section class="modules">
+        <h1>Modules</h1>
+        <table>
+            <tr><th>Modules Semester 1</th><th>Modules Semester 2</th></tr>
+            <tr><td>FIL 251</td><td>INF 271</td></tr>
+            <tr><td>INF 214</td><td>JCP 202</td></tr>
+            <tr><td>INF 272</td><td>INL 240</td></tr>
+        </table>
+    </section>
+
+    <script>
+        document.querySelectorAll('.flip-image').forEach(img => {
+            img.addEventListener('mouseover', () => img.classList.add('flipped'));
+            img.addEventListener('mouseout', () => img.classList.remove('flipped'));
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('nav ul li a');
+            links.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

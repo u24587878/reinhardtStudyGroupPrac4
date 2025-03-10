@@ -10,16 +10,26 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Simple Starting Sample", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            List of People
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../People/Index">Complete list of people</a></li>
+                            <li><a class="dropdown-item" href="~/HTML/Reinhardt Coetzee.html">Reinhardt Coetzee</a></li>
+                            <li><a class="dropdown-item" href="~/HTML/Reece Wenhold.html">Reece Wenhold</a></li>
+                            <li><a class="dropdown-item" href="~/HTML/Regardt van Heerden.html">Regardt van Heerden</a></li>
+                            <li><a class="dropdown-item" href="~/HTML/Xander Visagie.html">Xander Visagie</a></li>
+                            <li><a class="dropdown-item" href="~/HTML/Arno Smalberger.html">Arno Smalberger</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -35,5 +45,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -4,21 +4,24 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace INF272Lecture4v1.Models
+namespace reinhardtStudyGroupPrac2.Models
 {
     public class PersonModel
     {
 
-        [Display(Name = "First Name")]
+        [Display(Name = "STUDENT NUMBER")]
+        public string StudentNumber { get; set; }
+
+        [Display(Name = "NAME")]
         public string FirstName { get; set; }
 
-        [Display(Name = "Last Name")]
+        [Display(Name = "SURNAME")]
         public string LastName { get; set; }
 
-        [Display(Name = "Current Age")]
-        public int Age { get; set; } = 0;
+        [Display(Name = "EMAIL ADDRESS")]
+        public string EmailAddress { get; set; }
 
-        [Display(Name = "Living Status")]
-        public bool IsAlive { get; set; } = true;
+        [Display(Name = "LINK TO PERSONAL PAGE")]
+        public string MyLink { get; set; }
     }
 }

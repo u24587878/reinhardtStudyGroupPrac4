@@ -1,0 +1,124 @@
+﻿/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px; /* Added padding around all content */
+    background-color: #f4f4f4;
+}
+
+/* Styling for the navigation menu */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #000;
+    list-style: none;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            background-color: black;
+            border-right: 1px solid #444;
+            transition: background-color 0.3s ease;
+        }
+
+            nav ul li a:hover:not(.active) {
+                background-color: grey;
+            }
+
+            nav ul li a.active {
+                background-color: green;
+            }
+
+        nav ul li:last-child a {
+            border-right: none;
+        }
+
+/* Section styling */
+section {
+    max-width: 1900px; /* Optional: Limits width for better readability */
+    margin: 20px auto; /* Centers sections on the page */
+    padding: 20px; /* Padding inside the section */
+    border: 2px solid green; /* Green border */
+    background-color: white;
+}
+
+/* Image styling */
+.flip-image {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease;
+}
+
+    /* Flip effect */
+    .flip-image.flipped {
+        transform: scaleX(-1);
+    }
+
+/* Layout for bio and hobbies */
+.content {
+    display: flex;
+    align-items: flex-start; /* Aligns text to the top of the images */
+    gap: 20px; /* Space between text and image */
+}
+
+.bio .content img {
+    margin-right: 20px; /* Image on the left */
+}
+
+.hobbies .content img {
+    margin-left: 20px; /* Image on the right */
+}
+
+/* Table Styling */
+table {
+    width: 60%;
+    border-collapse: collapse;
+    text-align: center; /* Centers text in table cells */
+}
+
+th, td {
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Faint border */
+    padding: 10px;
+}
+
+th {
+    background-color: #eaeaea; /* Light gray background for headers */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio img,
+    .hobbies img {
+        margin: 0 0 10px 0;
+    }
+}
