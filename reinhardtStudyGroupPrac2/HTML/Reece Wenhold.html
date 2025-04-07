@@ -3,52 +3,65 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reinhardt Coetzee</title>
-    <link rel="stylesheet" href="../Content/Styles.css">
+    <title>Reece Wenhold</title>
+    <link rel="stylesheet" href="../Content/bootstrap.css">
+    <link rel="stylesheet" href="../Content/Styling.css">
 </head>
 <body>
-    <h1>Person 2 - Reece Wenhold</h1>
-    <nav>
-        <ul>
-            <li><a href="../Home/Index">MAIN</a></li>
-            <li><a href="../People/Index">LIST</a></li>
-            <li><a href="Reinhardt Coetzee.html">Reinhardt Coetzee</a></li>
-            <li><a href="Reece Wenhold.html">Reece Wenhold</a></li>
-            <li><a href="Regardt van Heerden.html">Regardt van Heerden</a></li>
-            <li><a href="Xander Visagie.html">Xander Visagie</a></li>
-            <li><a href="Arno Smalberger.html">Arno Smalberger</a></li>
-            <li><a href="javascript:history.back()">Back</a></li>
-        </ul>
-    </nav>
+    <div class="container mt-4">
+        <h1 class="mb-4">Person 2 - Reece Wenhold</h1>
 
-    <section class="bio">
-        <h1>Biography and Background</h1>
-        <div class="content">
-            <img src="../HTML/Images/black-widow-1.png" class="flip-image" alt="Reinhardt Coetzee Image">
-            <p>Reece Wenhold was born in Pretoria, South Africa. He is studying BsC (IS) Geography with the informatics elective stream. He studies geography because he likes it.</p>
+        <nav>
+            <ul>
+                <li><a href="../Home/Index">MAIN</a></li>
+                <li><a href="../People/Index">LIST</a></li>
+                <li><a href="Reinhardt Coetzee.html">Reinhardt Coetzee</a></li>
+                <li><a href="Reece Wenhold.html">Reece Wenhold</a></li>
+                <li><a href="Regardt van Heerden.html">Regardt van Heerden</a></li>
+                <li><a href="Xander Visagie.html">Xander Visagie</a></li>
+                <li><a href="Arno Smalberger.html">Arno Smalberger</a></li>
+                <li><a href="javascript:history.back()">Back</a></li>
+            </ul>
+        </nav>
+
+        <div class="row gx-0 mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <p>Biography and Background</p>
+                    <div class="clearfix">
+                        <img src="../HTML/Images/black-widow-1.png" class="float-start me-3 mb-2" alt="Reece Wenhold Image" width="150">
+                        <p>Reece Wenhold was born in Pretoria, South Africa. He is studying BsC (IS) Geography with the informatics elective stream. He studies geography because he likes it.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <section class="hobbies">
-        <h1>Hobbies</h1>
-        <div class="content">
-            <p>
-                He likes playing rugby, drinking, and playing with his friends with a rugby ball. Here is more text to make the image appear on the full right side of the screen becuase it is relative
-                to the text position and changed dynamically woah. I also love doing the following so yes haha.
-            </p>
-            <img src="../HTML/Images/Anthony-Mackie-Captain-America-4.png" class="flip-image" alt="Hobbies Image">
+        <div class="row gx-0 mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <p>Hobbies</p>
+                    <div class="clearfix">
+                        <img src="../HTML/Images/Anthony-Mackie-Captain-America-4.png" class="float-end ms-3 mb-2" alt="Hobbies Image" width="150">
+                        <p>He likes playing rugby, drinking, and playing with his friends with a rugby ball. Here is more text to make the image appear on the full right side of the screen because it is relative to the text position and changed dynamically woah. I also love doing the following so yes haha.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <section class="modules">
-        <h1>Modules</h1>
-        <table>
-            <tr><th>Modules Semester 1</th><th>Modules Semester 2</th></tr>
-            <tr><td>GEC 251</td><td>INF 271</td></tr>
-            <tr><td>INF 214</td><td>FIL 202</td></tr>
-            <tr><td>INF 272</td><td>INL 240</td></tr>
-        </table>
-    </section>
+        <div class="row gx-0">
+            <div class="col-12">
+                <div class="card">
+                    <p>Modules</p>
+                    <table class="table table-borderless table-sm mb-0">
+                        <tr><th>Modules Semester 1</th><th>Modules Semester 2</th></tr>
+                        <tr><td>GEC 251</td><td>INF 271</td></tr>
+                        <tr><td>INF 214</td><td>FIL 202</td></tr>
+                        <tr><td>INF 272</td><td>INL 240</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.querySelectorAll('.flip-image').forEach(img => {
