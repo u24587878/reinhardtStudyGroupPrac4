@@ -24,6 +24,9 @@
         <th>
             @Html.DisplayNameFor(model => model.MyLink)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Delete)
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -42,9 +45,36 @@
                 @Html.DisplayFor(modelItem => item.EmailAddress)
             </td>
             <td>
-            <a href="@Url.Content("~/HTML/" + item.FirstName+ " "+ item.LastName + ".html")" class="btn btn-primary">LINK</a>
+            <a href="@Url.Content("~/HTML/" + item.FirstName+ " "+ item.LastName + ".html")" class="btn btn-success">LINK</a>
+            </td>
+            <td>
+            <button class="btn btn-success" onclick="deleteRow(this)">Delete</button>
             </td>
         </tr>
     }
 </table>
 
+@section scripts {
+<script>
+    function deleteRow(button) {
+        var row = button.closest("tr");
+        row.remove();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const rows = document.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+            const namepos = rows[i].cells[1];
+            const name = namepos.textContent.trim();
+
+            if (name[0].toUpperCase() === "R") {
+                const cells = rows[i].getElementsByTagName("td");
+                for (let j = 0; j < cells.length; j++) {
+                    cells[j].style.color = "red";
+                }
+            }
+        }
+    });
+</script>
+    }

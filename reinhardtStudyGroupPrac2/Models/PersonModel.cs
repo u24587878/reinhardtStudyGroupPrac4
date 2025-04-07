@@ -23,5 +23,8 @@ namespace reinhardtStudyGroupPrac2.Models
 
         [Display(Name = "LINK TO PERSONAL PAGE")]
         public string MyLink { get; set; }
+
+        [Display(Name = "DELETE")]
+        public string Delete { get; set; }
     }
 }
